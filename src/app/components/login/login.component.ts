@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   error: string = '';
 
   constructor(
-    private formBuilder: FormBuilder,
+    private fb: FormBuilder,
     private router:Router,
     private route: ActivatedRoute,
     private authService:AuthService
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   }
 
   createForm(){
-    this.loginForm = this.formBuilder.group({
+    this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
     });

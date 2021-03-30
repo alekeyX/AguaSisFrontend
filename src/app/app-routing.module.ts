@@ -5,8 +5,12 @@ import { HomeComponent } from './components/shared/home/home.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', component: HomeComponent },
+  // { path: '', component: HomeComponent },
   // { path: '**', pathMatch: 'full', redirectTo: '/' },
+  {
+    path: '', 
+    loadChildren: () => import('./main.module').then(m => m.MainModule)
+  },
 ];
 
 @NgModule({

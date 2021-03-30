@@ -10,19 +10,23 @@ import { ErrorInterceptor } from './components/helpers/error.interceptor';
 // Componentes
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/shared/home/home.component';
+// Modulos
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainModule } from './main.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MainModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
