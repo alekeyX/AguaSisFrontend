@@ -30,7 +30,8 @@ export class AuthService {
     return this.http.post<any>(environment.apiUrl + '/login', {username, password})
       .pipe(map(user => {
         // iniciar sesión correctamente si hay un token en la respuesta
-        if (user && user.token) {
+        if (user && user.data.token) {
+          
           // almacenar detalles de usuario y token en local storage para mantener
           // al usuario conectado entre actualizaciones de página
           localStorage.setItem('currentUser', JSON.stringify(user));

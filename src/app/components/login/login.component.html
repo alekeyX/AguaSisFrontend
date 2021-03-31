@@ -1,10 +1,10 @@
-<div class="container py-5 col-md-5 col-lg-6 animated fadeIn">
+<div class="container py-5 col-md-6 col-lg-6 animated fadeIn">
     <div class="card">
-        <h4 class="card-header bg-aqua text-white text-center">Inicio de Sesión</h4>
+        <h4 class="card-header bg-p text-white text-center">Inicio de Sesión</h4>
         <div class="card-body">
             <!-- Formulario de Login -->
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="username">Nombre de Usuario</label>
                     <input type="text" class="form-control" name="username" id="username" formControlName="username" 
                             [ngClass]="{ 'is-invalid': submitted && form.username.errors }" required>
@@ -13,7 +13,7 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-3">
                     <label for="password">Contraseña</label>
                     <input type="password" class="form-control" name="password" id="password" formControlName="password" 
                             [ngClass]="{ 'is-invalid': submitted && form.password.errors }" required>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
 
-                <button [disabled]="loading" type="submit" class="text-white btn btn-block bg-aqua">
+                <button [disabled]="loading" type="submit" class="btn btn-primary d-block">
                     <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                     Iniciar Sesión
                 </button>
