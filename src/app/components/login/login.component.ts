@@ -26,14 +26,14 @@ export class LoginComponent implements OnInit {
     ) {
     // redirigir a home si ya inició sesión
     if (this.authService.currentUserValue){
-        this.router.navigate(['/']);
+        this.router.navigate(['/admin']);
       }
     }
     
   ngOnInit(): void {
     this.createForm();
     // Obtener URL de retorno de los parámetros de ruta o por defecto a '/'
-    this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/';
+    this.returnUrl = this.route.snapshot.queryParams.returnUrl || '/admin';
   }
 
   createForm(){

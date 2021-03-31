@@ -10,12 +10,14 @@ import { ErrorInterceptor } from './components/helpers/error.interceptor';
 // Componentes
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/shared/home/home.component';
+import { LoteComponent } from './components/admin/lote/lote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    LoteComponent,
   ],
   imports: [
     BrowserModule,
