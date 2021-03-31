@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+.text-p {
+    color: #276678;
+    text-decoration: none;
+}
+
+.text-s {
+    color: #1687a7;
+    text-decoration: none;
+}
+
+.bg-p {
+    background: #276678 !important;
+    color: #fff !important;
+}
+.bg-s {
+    background: #1687a7 !important;
+    color: #fff !important;
+}
+.bg-lp {
+    background: #d3e0ea !important;
+}
+.bg-ls {
+    background: #f6f5f5 !important;
+}
